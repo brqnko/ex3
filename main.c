@@ -5,6 +5,11 @@
 int main() {
     srand(time(NULL));
 
+    char name[128];
+    printf("Who are you?\n> ");
+    scanf("%s", name);  
+    printf("Hello, %s", name);  
+
     printf("Tossing a coin...\n");
     int heads = 0, tails = 0;
     int i;
@@ -19,9 +24,9 @@ int main() {
     }
     printf("Heads: %d, Tails: %d\n", heads, tails);
     if (heads > tails) {
-        printf("You won\n");
+        printf("%s won\n", name);
     } else {
-        printf("You lost\n");
+        printf("%s lost\n", name);
     }
     return 0;
 }
